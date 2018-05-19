@@ -7,9 +7,15 @@ export default class Timeline extends PureComponent {
             <div className="timeline-item">
                 <div className="timeline-icon" />
                 <div className="timeline-content">
-                    <h2 className="timeline_header">일련의 제목입니다</h2>
+                    <h2
+                        onClick={(event) => {
+                            event.preventDefault();
+                            this.props.addCount();
+                        }} 
+                        className="timeline_header"
+                    >{this.props.name}</h2>
                         <p className="timeline_content">
-                            뭔가 타임라인의 내용입니다
+                            {this.props.description}
                         </p>
                     <a 
                         href="/" 

@@ -4,7 +4,7 @@ export default class TimelineHeader extends PureComponent {
     
     render() {
         return (
-            <h1 className="project-name">나의 타임라인</h1>
+            <h1 className="project-name">{this.props.title}</h1>
         );
     }
 }
